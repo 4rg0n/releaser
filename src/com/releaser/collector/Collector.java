@@ -15,6 +15,11 @@ import java.util.ArrayList;
  */
 public class Collector
 {
+    /**
+     * Collects information from each subfolder in given path
+     *
+     * @param path folder path
+     */
     public static void collect(String path)
     {
         Reader reader = new Reader(Paths.get(path));
@@ -50,5 +55,15 @@ public class Collector
             //TODO Logger
             System.out.println(e.getMessage());
         }
+    }
+
+    /**
+     * Deletes all collected information in subdirectories in given path
+     *
+     * @param path folder path
+     */
+    public void clean(String path)
+    {
+        //TODO Code
     }
 }
