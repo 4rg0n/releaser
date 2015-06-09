@@ -1,4 +1,4 @@
-package com.releaser.gui.filter;
+package com.releaser.gui.swing.filter;
 
 import com.releaser.collector.model.jaxb.output.omdb.OutputOmdbModel;
 import com.releaser.collector.release.Release;
