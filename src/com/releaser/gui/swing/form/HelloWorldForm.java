@@ -1,4 +1,4 @@
-package com.releaser.gui.form;
+package com.releaser.gui.swing.form;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

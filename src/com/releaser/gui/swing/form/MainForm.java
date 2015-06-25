@@ -1,10 +1,10 @@
-package com.releaser.gui.form;
+package com.releaser.gui.swing.form;
 
 import com.releaser.collector.Collector;
 import com.releaser.collector.file.Reader;
 import com.releaser.collector.release.Release;
-import com.releaser.gui.filter.ReleaseRowFilter;
-import com.releaser.gui.model.table.ReleaseTableModel;
+import com.releaser.gui.swing.filter.ReleaseRowFilter;
+import com.releaser.gui.swing.table.ReleaseTableModel;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;

@@ -1,6 +1,6 @@
-package com.releaser.gui;
+package com.releaser.gui.swing;
 
-import com.releaser.gui.form.MainForm;
+import com.releaser.gui.swing.form.MainForm;
 
 public class Main {
 

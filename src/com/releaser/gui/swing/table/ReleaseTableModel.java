@@ -1,4 +1,4 @@
-package com.releaser.gui.model.table;
+package com.releaser.gui.swing.table;
 
 import javax.swing.table.DefaultTableModel;
 
