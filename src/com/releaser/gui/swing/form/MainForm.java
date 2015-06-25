@@ -1,6 +1,5 @@
 package com.releaser.gui.swing.form;
 
-import com.releaser.collector.Collector;
 import com.releaser.collector.file.Reader;
 import com.releaser.collector.release.Release;
 import com.releaser.gui.swing.filter.ReleaseRowFilter;
@@ -55,7 +54,7 @@ public class MainForm extends JFrame
             {
                 String path = folderField.getText();
                 collectButton.setEnabled(false);
-                Collector.collect(path);
+                //Collector.collect(path);
                 collectButton.setEnabled(true);
             }
         });
