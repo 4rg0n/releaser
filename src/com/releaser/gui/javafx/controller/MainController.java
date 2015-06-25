@@ -52,7 +52,13 @@ public class MainController implements Initializable
     private TableView<ReleaseTableModel> releaseTable;
 
     @FXML
-    private TableColumn<ReleaseTableModel, String> nameColumn;
+    private TableColumn<ReleaseTableModel, String> releaserTableNameColumn;
+
+    @FXML
+    private TableColumn<ReleaseTableModel, String> releaserTableTitleColumn;
+
+    @FXML
+    private TableColumn<ReleaseTableModel, String> releaserTableImdbRatingColumn;
 
     private static final Logger log = Logger.getLogger(MainController.class.getName());
 
@@ -87,7 +93,9 @@ public class MainController implements Initializable
         });
 
         //Bind ReleaseTableModel Data to Table Columns
-        nameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+        releaserTableNameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
+        releaserTableTitleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
+        releaserTableImdbRatingColumn.setCellValueFactory(cellData -> cellData.getValue().imdbRatingProperty());
     }
 
     /**
@@ -157,7 +165,11 @@ public class MainController implements Initializable
                     //Fill release with information from releaser file
                     release.hibernateFile();
 
-                    tableItems.add(new ReleaseTableModel(release.getName()));
+                    tableItems.add(new ReleaseTableModel(
+                            release.getName(),
+                            release.getModel().omdb.title,
+                            release.getModel().omdb.imdbRating
+                    ));
                 }
             }
         } catch (IOException e) {

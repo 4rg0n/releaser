@@ -44,7 +44,9 @@
                      <content>
                         <TableView fx:id="releaseTable" prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Name" fx:id="nameColumn" />
+                            <TableColumn prefWidth="75.0" text="Name" fx:id="releaserTableNameColumn" />
+                            <TableColumn prefWidth="75.0" text="Title" fx:id="releaserTableTitleColumn" />
+                            <TableColumn prefWidth="75.0" text="Imdb Rating" fx:id="releaserTableImdbRatingColumn" />
                           </columns>
                         </TableView>
                      </content>

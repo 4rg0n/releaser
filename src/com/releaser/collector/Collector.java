@@ -22,6 +22,8 @@ public class Collector
     /**
      * Collects information from each subfolder in given path
      *
+     * @todo return hibernated releases count
+     *
      * @param path folder path
      */
     public void collect(String path) throws CollectorException
