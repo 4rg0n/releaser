@@ -19,9 +19,9 @@ public interface ReleaseInterface
 
     public File getFile();
 
-    public Boolean update() throws IOException;
+    public boolean update() throws IOException;
 
-    public Boolean save() throws IOException;
+    public boolean save() throws IOException;
 
     public ApiXRelModel getXRelModel();
 }

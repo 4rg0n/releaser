@@ -2,6 +2,7 @@ package com.releaser.collector;
 
 import com.releaser.collector.apiclient.OmdbClient;
 import com.releaser.collector.apiclient.XRelClient;
+import com.releaser.collector.exception.CollectorException;
 import com.releaser.collector.file.Reader;
 import com.releaser.collector.release.Release;
 import com.releaser.collector.release.ReleaseInterface;
@@ -9,13 +10,21 @@ import com.releaser.collector.release.ReleaseInterface;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Collector
  */
 public class Collector
 {
-    public static void collect(String path)
+    private Logger logger = Logger.getLogger(Collector.class.getName());
+
+    /**
+     * Collects information from each subfolder in given path
+     *
+     * @param path folder path
+     */
+    public void collect(String path) throws CollectorException
     {
         Reader reader = new Reader(Paths.get(path));
         XRelClient xRelClient = new XRelClient();
@@ -30,9 +39,7 @@ public class Collector
                     release.hibernateRelease(xRelClient);
                     release.hibernateOmdb(omdbClient);
                 } catch (RuntimeException e) {
-                    //TODO Logger
-                    System.out.println("Skipping Release '" + release.getName() + "'");
-                    System.out.println("Reason: " + e.getMessage());
+                    logger.info("Skipping Release '" + release.getName() + "'. Reason: " + e.getMessage());
                 }
             }
 
@@ -41,14 +48,54 @@ public class Collector
                 try {
                     release.save();
                 } catch (IOException|RuntimeException e) {
-                    //TODO Logger
-                    System.out.println(e.getMessage());
+                    logger.warning("Unable to save releaser file in " + release.getFile().getPath());
                 }
             }
 
         } catch (IOException e) {
-            //TODO Logger
-            System.out.println(e.getMessage());
+            throw new CollectorException(
+                    "Could not read releases",
+                    e
+            );
         }
+    }
+
+    /**
+     * Deletes all collected information (releaser.xml) in subdirectories in given path
+     *
+     * @param path folder path
+     */
+    public void clean(String path) throws CollectorException
+    {
+        Reader reader = new Reader(Paths.get(path));
+
+        try {
+            ArrayList<Release> releases = reader.read();
+
+            for (Release release : releases) {
+
+                try {
+                    release.delete();
+                } catch (IOException e) {
+                    logger.warning(e.getMessage());
+                }
+            }
+
+        } catch (IOException e) {
+            throw new CollectorException(
+                    "Could not read releases",
+                    e
+            );
+        }
+    }
+
+    /**
+     * Returns the logger
+     *
+     * @return logger instance
+     */
+    public Logger getLogger()
+    {
+        return logger;
     }
 }

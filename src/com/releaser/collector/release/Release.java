@@ -171,7 +171,7 @@ public class Release implements ReleaseInterface
         return file.getName();
     }
 
-    public Boolean update()
+    public boolean update()
     {
         return true;
     }
@@ -179,12 +179,20 @@ public class Release implements ReleaseInterface
     /**
      *
      * @return success
-     * @throws IOException
+     * @throws IOException|RuntimeException
      */
-    public Boolean save() throws IOException, RuntimeException
+    public boolean save() throws IOException, RuntimeException
     {
         if (apiOmdbModel == null && xRelModel == null) {
             throw new RuntimeException("Release '" + getName() + "' has no data to save");
+        }
+
+        String savePath = file.getPath() + File.separator + Release.FILENAME;
+        File releaserFile = new File(savePath);
+
+        //Skip file if already exists
+        if (releaserFile.exists()) {
+            return false;
         }
 
         ReleaserModel model = new ReleaserModel();
@@ -199,19 +207,31 @@ public class Release implements ReleaseInterface
         //Save model in class
         this.model = model;
 
-        String savePath = file.getPath() + File.separator + Release.FILENAME;
-        File releaserFile = new File(savePath);
-
-        //Delete file if already exists
-        if (releaserFile.exists()) {
-            if (!releaserFile.delete()) {
-                throw new IOException("Could not delete file '" + releaserFile.getPath() + "'");
-            }
-        }
-
         if (releaserFile.createNewFile()) {
             //Populate file with XML stuff
             JAXB.marshal(model, releaserFile);
+        }
+
+        return true;
+    }
+
+    /**
+     * Deletes the releaser file in the release folder
+     * Returns if the file could be deleted or not
+     *
+     * @return success
+     */
+    public boolean delete() throws IOException
+    {
+        String releaserFilePath = file.getPath() + File.separator + Release.FILENAME;
+        File releaserFile = new File(releaserFilePath);
+
+        if (!releaserFile.exists()) {
+            return false;
+        }
+
+        if (!releaserFile.delete()) {
+            throw new IOException("Could not delete file '" + releaserFilePath + "'");
         }
 
         return true;
