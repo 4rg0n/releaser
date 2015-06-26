@@ -13,7 +13,7 @@
       <HBox alignment="CENTER_LEFT" spacing="10.0">
          <children>
             <Label text="Folder" />
-            <TextField fx:id="folderTextField" />
+            <TextField fx:id="folderTextField" text="data/test" />
             <Button mnemonicParsing="false" onAction="#openFolder" text="Open" />
             <Region HBox.hgrow="ALWAYS" />
             <Label text="Filter" />
@@ -44,9 +44,9 @@
                      <content>
                         <TableView fx:id="releaseTable" prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="Name" fx:id="releaserTableNameColumn" />
-                            <TableColumn prefWidth="75.0" text="Title" fx:id="releaserTableTitleColumn" />
-                            <TableColumn prefWidth="75.0" text="Imdb Rating" fx:id="releaserTableImdbRatingColumn" />
+                            <TableColumn fx:id="releaserTableNameColumn" prefWidth="136.0" text="Name" />
+                            <TableColumn fx:id="releaserTableTitleColumn" prefWidth="262.0" text="Title" />
+                            <TableColumn fx:id="releaserTableImdbRatingColumn" editable="false" prefWidth="42.0" text="Imdb " />
                           </columns>
                         </TableView>
                      </content>
@@ -55,7 +55,7 @@
                      <content>
                         <TableView prefHeight="200.0" prefWidth="200.0">
                           <columns>
-                            <TableColumn prefWidth="75.0" text="C1"/>
+                            <TableColumn prefWidth="75.0" text="C1" />
                           </columns>
                         </TableView>
                      </content>

@@ -2,6 +2,7 @@ package com.releaser.collector.apiclient;
 
 import com.releaser.collector.exception.ApiClientException;
 import com.releaser.collector.model.jaxb.api.xrel.ApiXRelModel;
+import com.releaser.collector.model.jaxb.api.xrel.ApiXrelRateLimitStatus;
 import com.releaser.collector.release.ReleaseInterface;
 
 import javax.xml.bind.JAXB;
@@ -50,6 +51,49 @@ public class XRelClient implements ApiClientInterface
             connection.disconnect();
 
             return apiXRelModel;
+
+        } catch (MalformedURLException urlException) {
+            throw new ApiClientException("Malformed URL: " + urlString, urlException);
+        } catch (IOException ioException) {
+            throw new ApiClientException("Cannot read response.", ioException);
+        }
+    }
+
+    /**
+     * Reads the amount of api calls left and the reset time
+     *
+     * @return model with limitation info
+     * @throws ApiClientException
+     */
+    public ApiXrelRateLimitStatus getLimitStatus() throws ApiClientException
+    {
+        //TODO put in config
+        String urlString = "http://api.xrel.to/api/user/rate_limit_status.xml";
+
+        try {
+            URL url = new URL(urlString);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+            //Send request via GET
+            connection.setRequestMethod("GET");
+
+            //Accept XML
+            connection.setRequestProperty("Accept", "application/xml");
+
+            //Connection successful?
+            if (connection.getResponseCode() != 200) {
+                throw new ApiClientException("Failed: HTTP error code: " + connection.getResponseCode());
+            }
+
+            ApiXrelRateLimitStatus rateLimitStatusModel = JAXB.unmarshal(
+                    connection.getInputStream(),
+                    ApiXrelRateLimitStatus.class
+            );
+
+            //Close connection
+            connection.disconnect();
+
+            return rateLimitStatusModel;
 
         } catch (MalformedURLException urlException) {
             throw new ApiClientException("Malformed URL: " + urlString, urlException);

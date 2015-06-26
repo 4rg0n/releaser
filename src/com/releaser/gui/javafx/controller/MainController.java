@@ -136,6 +136,8 @@ public class MainController implements Initializable
         }
 
         loadButton.setDisable(false);
+
+        scan();
     }
 
     /**
@@ -145,6 +147,15 @@ public class MainController implements Initializable
      */
     @FXML
     protected void doScan(ActionEvent event)
+    {
+        scan();
+    }
+
+    /**
+     * Collects information from releaser files and displays it in a table
+     */
+    @FXML
+    private void scan()
     {
         String path = folderTextField.getText();
         Reader reader = new Reader(Paths.get(path));
