@@ -12,6 +12,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Window;
 
@@ -60,6 +62,9 @@ public class MainController implements Initializable
     @FXML
     private TableColumn<ReleaseTableModel, String> releaserTableImdbRatingColumn;
 
+    @FXML
+    private WebView releaseInfoWebView;
+
     private static final Logger log = Logger.getLogger(MainController.class.getName());
 
     private final Collector collector = new Collector();
@@ -96,6 +101,16 @@ public class MainController implements Initializable
         releaserTableNameColumn.setCellValueFactory(cellData -> cellData.getValue().nameProperty());
         releaserTableTitleColumn.setCellValueFactory(cellData -> cellData.getValue().titleProperty());
         releaserTableImdbRatingColumn.setCellValueFactory(cellData -> cellData.getValue().imdbRatingProperty());
+
+        //Add Selection Listener to releaserTable
+        releaseTable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                Release release = newSelection.getRelease();
+                WebEngine webEngine = releaseInfoWebView.getEngine();
+
+                webEngine.loadContent(release.getModel().toString());
+            }
+        });
     }
 
     /**
@@ -177,6 +192,7 @@ public class MainController implements Initializable
                     release.hibernateFile();
 
                     tableItems.add(new ReleaseTableModel(
+                            release,
                             release.getName(),
                             release.getModel().omdb.title,
                             release.getModel().omdb.imdbRating

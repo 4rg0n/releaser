@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.web.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.*?>
@@ -53,11 +54,7 @@
                   </ScrollPane>
                   <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="225.0" prefViewportWidth="440.0">
                      <content>
-                        <TableView prefHeight="200.0" prefWidth="200.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                          </columns>
-                        </TableView>
+                        <WebView prefHeight="200.0" prefWidth="200.0" fx:id="releaseInfoWebView"/>
                      </content>
                   </ScrollPane>
                </items>

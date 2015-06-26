@@ -1,5 +1,6 @@
 package com.releaser.gui.javafx.model.table;
 
+import com.releaser.collector.release.Release;
 import javafx.beans.property.*;
 
 /**
@@ -7,14 +8,17 @@ import javafx.beans.property.*;
  */
 public class ReleaseTableModel
 {
+    private final Release release;
+
     private final StringProperty name;
 
     private final StringProperty title;
 
     private final StringProperty imdbRating;
 
-    public ReleaseTableModel(String name, String title, Double imdbRating)
+    public ReleaseTableModel(Release release, String name, String title, Double imdbRating)
     {
+        this.release = release;
         this.name = new SimpleStringProperty(name);
         this.title = new SimpleStringProperty(title);
         this.imdbRating = new SimpleStringProperty(imdbRating.toString());
@@ -58,5 +62,9 @@ public class ReleaseTableModel
 
     public void setTitle(String title) {
         this.title.set(title);
+    }
+
+    public Release getRelease() {
+        return release;
     }
 }

@@ -31,5 +31,62 @@ Currently this is a very early alpha version. You can pre-order it right now and
 * Add support for more apis (could cause huge software architecture changes...)
 * ...
 
+## Filter Concept
+
+* Syntax:
+
+        category:search-term, category:search-term, [...]
+* Example:
+
+        genre:horror, actor:Anthony Perkins
+
+### Categories
+
+* genre
+* actor
+* title
+* director
+* writer
+* imdb-id
+* country
+* release-group
+
+### Special Categories
+
+**released**
+
+* Syntax:
+
+        released:<operator><year>
+* Example:
+
+        released:=2015
+* Example:
+
+        released:<1990
+
+**imdb**
+
+* Syntax:
+
+        imdb:<operator><number>
+* Example:
+
+        imdb:<7
+* Example:
+
+        imdb:>5.5
+
+**metascore**
+
+* Syntax:
+
+        metascore:<operator><number>
+* Example:
+
+        metascore:>=67
+* Example:
+
+        metascore:<78
 
 
