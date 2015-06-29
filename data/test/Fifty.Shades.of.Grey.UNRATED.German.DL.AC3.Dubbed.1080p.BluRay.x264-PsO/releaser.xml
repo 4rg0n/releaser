@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<releaser>
+    <release>
+        <id>8bae93f7eb1ae</id>
+        <dirname>Fifty.Shades.of.Grey.UNRATED.German.DL.AC3.Dubbed.1080p.BluRay.x264-PsO</dirname>
+        <link_href>http://www.xrel.to/movie-nfo/962990/Fifty-Shades-of-Grey-UNRATED-German-DL-AC3-Dubbed-1080p-BluRay-x264-PsO.html</link_href>
+        <time>1430353270</time>
+        <group_name>PsO</group_name>
+        <nuke_reason></nuke_reason>
+        <size>
+            <number>9160</number>
+            <unit>MB</unit>
+        </size>
+        <video_type>Blu-ray</video_type>
+        <audio_type>AC3-Dubbed</audio_type>
+        <num_ratings>1.0</num_ratings>
+        <video_rating>10.0</video_rating>
+        <audio_rating>8.0</audio_rating>
+        <ext_info>
+            <type>movie</type>
+            <id>e42004a21a06a</id>
+            <title>Fifty Shades of Grey</title>
+            <link_href>http://www.xrel.to/movie/106602/Fifty-Shades-of-Grey.html</link_href>
+            <rating>3.0417</rating>
+            <num_ratings>120</num_ratings>
+            <uris>
+                <uri>imdb:tt2322441</uri>
+            </uris>
+        </ext_info>
+        <flags/>
+    </release>
+    <omdb>
+        <title>Fifty Shades of Grey</title>
+        <year>2015</year>
+        <rated>R</rated>
+        <released>13 Feb 2015</released>
+        <runtime>125 min</runtime>
+        <genres>
+            <genre>Drama</genre>
+            <genre>Romance</genre>
+        </genres>
+        <directors>
+            <director>Sam Taylor-Johnson</director>
+        </directors>
+        <writers>
+            <writer>Kelly Marcel (screenplay)</writer>
+            <writer>E.L. James (novel)</writer>
+        </writers>
+        <actors>
+            <actor>Dakota Johnson</actor>
+            <actor>Jamie Dornan</actor>
+            <actor>Jennifer Ehle</actor>
+            <actor>Eloise Mumford</actor>
+        </actors>
+        <plot>Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey.</plot>
+        <language>English</language>
+        <country>USA</country>
+        <poster>http://ia.media-imdb.com/images/M/MV5BMjE1MTM4NDAzOF5BMl5BanBnXkFtZTgwNTMwNjI0MzE@._V1_SX300.jpg</poster>
+        <metascore>46</metascore>
+        <imdbRating>4.2</imdbRating>
+        <imdbVotes>157,798</imdbVotes>
+        <imdbID>tt2322441</imdbID>
+        <type>movie</type>
+    </omdb>
+</releaser>

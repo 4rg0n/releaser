@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<releaser>
+    <release>
+        <id>d1303903e9999</id>
+        <dirname>Chappie.TS.LD.German.x264.iNTERNAL-PsO</dirname>
+        <link_href>http://www.xrel.to/movie-nfo/956825/Chappie-TS-LD-German-x264-iNTERNAL-PsO.html</link_href>
+        <time>1429014251</time>
+        <group_name>PsO</group_name>
+        <nuke_reason></nuke_reason>
+        <size>
+            <number>1256</number>
+            <unit>MB</unit>
+        </size>
+        <video_type>TeleSync</video_type>
+        <audio_type>LineDubbed</audio_type>
+        <num_ratings>2.0</num_ratings>
+        <video_rating>8.0</video_rating>
+        <audio_rating>8.5</audio_rating>
+        <ext_info>
+            <type>movie</type>
+            <id>b9e64ffd1d1fa</id>
+            <title>Chappie</title>
+            <link_href>http://www.xrel.to/movie/119290/Chappie.html</link_href>
+            <rating>7.2442</rating>
+            <num_ratings>86</num_ratings>
+            <uris>
+                <uri>imdb:tt1823672</uri>
+            </uris>
+        </ext_info>
+        <flags/>
+    </release>
+    <omdb>
+        <title>Chappie</title>
+        <year>2015</year>
+        <rated>R</rated>
+        <released>06 Mar 2015</released>
+        <runtime>120 min</runtime>
+        <genres>
+            <genre>Action</genre>
+            <genre>Sci-Fi</genre>
+            <genre>Thriller</genre>
+        </genres>
+        <directors>
+            <director>Neill Blomkamp</director>
+        </directors>
+        <writers>
+            <writer>Neill Blomkamp</writer>
+            <writer>Terri Tatchell</writer>
+        </writers>
+        <actors>
+            <actor>Sharlto Copley</actor>
+            <actor>Dev Patel</actor>
+            <actor>Ninja</actor>
+            <actor>Yo-Landi Visser</actor>
+        </actors>
+        <plot>In the near future, crime is patrolled by a mechanized police force. When one police droid, Chappie, is stolen and given new programming, he becomes the first robot with the ability to think and feel for himself.</plot>
+        <language>English</language>
+        <country>USA, Mexico</country>
+        <poster>http://ia.media-imdb.com/images/M/MV5BMTUyNTI4NTIwNl5BMl5BanBnXkFtZTgwMjQ4MTI0NDE@._V1_SX300.jpg</poster>
+        <metascore>41</metascore>
+        <imdbRating>7.0</imdbRating>
+        <imdbVotes>88,051</imdbVotes>
+        <imdbID>tt1823672</imdbID>
+        <type>movie</type>
+    </omdb>
+</releaser>

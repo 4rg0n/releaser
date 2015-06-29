@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<releaser>
+    <release>
+        <id>6bdab6caebdc9</id>
+        <dirname>Run.all.Night.German.DL.AC3.Dubbed.720p.WebHD.h264-PsO</dirname>
+        <link_href>http://www.xrel.to/movie-nfo/966089/Run-all-Night-German-DL-AC3-Dubbed-720p-WebHD-h264-PsO.html</link_href>
+        <time>1431030143</time>
+        <group_name>PsO</group_name>
+        <nuke_reason></nuke_reason>
+        <size>
+            <number>3200</number>
+            <unit>MB</unit>
+        </size>
+        <video_type>Web-Rip</video_type>
+        <audio_type>AC3-Dubbed</audio_type>
+        <num_ratings>10.0</num_ratings>
+        <video_rating>8.0</video_rating>
+        <audio_rating>8.9</audio_rating>
+        <ext_info>
+            <type>movie</type>
+            <id>3e3691891c92d</id>
+            <title>Run All Night</title>
+            <link_href>http://www.xrel.to/movie/117037/Run-All-Night.html</link_href>
+            <rating>7.32</rating>
+            <num_ratings>50</num_ratings>
+            <uris>
+                <uri>imdb:tt2199571</uri>
+            </uris>
+        </ext_info>
+        <flags/>
+    </release>
+    <omdb>
+        <title>Run All Night</title>
+        <year>2015</year>
+        <rated>R</rated>
+        <released>13 Mar 2015</released>
+        <runtime>114 min</runtime>
+        <genres>
+            <genre>Action</genre>
+            <genre>Crime</genre>
+            <genre>Drama</genre>
+        </genres>
+        <directors>
+            <director>Jaume Collet-Serra</director>
+        </directors>
+        <writers>
+            <writer>Brad Ingelsby</writer>
+        </writers>
+        <actors>
+            <actor>Liam Neeson</actor>
+            <actor>Ed Harris</actor>
+            <actor>Joel Kinnaman</actor>
+            <actor>Boyd Holbrook</actor>
+        </actors>
+        <plot>Mobster and hit man Jimmy Conlon has one night to figure out where his loyalties lie: with his estranged son, Mike, whose life is in danger, or his longtime best friend, mob boss Shawn Maguire, who wants Mike to pay for the death of his own son.</plot>
+        <language>English</language>
+        <country>USA</country>
+        <poster>http://ia.media-imdb.com/images/M/MV5BMTU2ODI3ODEyOV5BMl5BanBnXkFtZTgwMTM3NTQzNDE@._V1_SX300.jpg</poster>
+        <metascore>59</metascore>
+        <imdbRating>6.8</imdbRating>
+        <imdbVotes>17,521</imdbVotes>
+        <imdbID>tt2199571</imdbID>
+        <type>movie</type>
+    </omdb>
+</releaser>

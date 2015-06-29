@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="525.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.releaser.gui.javafx.controller.MainController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="Folder" />
+            <TextField fx:id="folderTextField" text="data/test" />
+            <Button mnemonicParsing="false" onAction="#openFolder" text="Open" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Filter" />
+            <TextField />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="loadButton" disable="true" mnemonicParsing="false" onAction="#doLoad" text="Load">
+               <tooltip>
+                  <Tooltip text="Reads information from xrel.to and imdb about each release in given path. (internet  connectionrequired)" />
+               </tooltip></Button>
+            <Button fx:id="scanButton" disable="true" mnemonicParsing="false" onAction="#doScan" text="Scan">
+               <tooltip>
+                  <Tooltip text="Reads information from file about all releases in the given folder" />
+               </tooltip></Button>
+            <Button fx:id="cleanButton" disable="true" mnemonicParsing="false" onAction="#doClean" style="-fx-background-color: indianred;" text="Clean">
+               <tooltip>
+                  <Tooltip text="Deletes all files created by this programm in given path" />
+               </tooltip></Button>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+      <SplitPane dividerPositions="0.5" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+         <items>
+            <SplitPane dividerPositions="0.5" VBox.vgrow="ALWAYS">
+               <items>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="225.0" prefViewportWidth="441.0">
+                     <content>
+                        <TableView fx:id="releaseTable" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn fx:id="releaserTableNameColumn" prefWidth="136.0" text="Name" />
+                            <TableColumn fx:id="releaserTableTitleColumn" prefWidth="262.0" text="Title" />
+                            <TableColumn fx:id="releaserTableImdbRatingColumn" editable="false" prefWidth="42.0" text="Imdb " />
+                          </columns>
+                        </TableView>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="225.0" prefViewportWidth="440.0">
+                     <content>
+                        <WebView prefHeight="200.0" prefWidth="200.0" fx:id="releaseInfoWebView"/>
+                     </content>
+                  </ScrollPane>
+               </items>
+            </SplitPane>
+            <TitledPane focusTraversable="false" text="Messages" textAlignment="JUSTIFY" wrapText="true" VBox.vgrow="ALWAYS">
+               <content>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="200.0" prefViewportWidth="885.0">
+                     <content>
+                        <ListView fx:id="messageListView" prefHeight="200.0" prefWidth="200.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+         </items>
+      </SplitPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="889.0">
+         <children>
+            <Label text="Made by" />
+            <Hyperlink text="4rg0n" />
+            <Label text="powered by" />
+            <Hyperlink text="xrel.to" />
+            <Label text="and" />
+            <Hyperlink text="omdbapi.com" />
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <ProgressBar prefWidth="200.0" progress="0.0" visible="false" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>

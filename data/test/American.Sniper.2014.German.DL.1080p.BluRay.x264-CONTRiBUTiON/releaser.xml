@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<releaser>
+    <release>
+        <id>005419adeb9cb</id>
+        <dirname>American.Sniper.2014.German.DL.1080p.BluRay.x264-CONTRiBUTiON</dirname>
+        <link_href>http://www.xrel.to/movie-nfo/965067/American-Sniper-2014-German-DL-1080p-BluRay-x264-CONTRiBUTiON.html</link_href>
+        <time>1430840743</time>
+        <group_name>CONTRiBUTiON</group_name>
+        <nuke_reason></nuke_reason>
+        <size>
+            <number>4964</number>
+            <unit>MB</unit>
+        </size>
+        <video_type>Blu-ray</video_type>
+        <audio_type>AC3</audio_type>
+        <num_ratings>0.0</num_ratings>
+        <video_rating>0.0</video_rating>
+        <audio_rating>0.0</audio_rating>
+        <ext_info>
+            <type>movie</type>
+            <id>51e583051bb1f</id>
+            <title>American Sniper</title>
+            <link_href>http://www.xrel.to/movie/113439/American-Sniper.html</link_href>
+            <rating>6.9187</rating>
+            <num_ratings>123</num_ratings>
+            <uris>
+                <uri>imdb:tt2179136</uri>
+            </uris>
+        </ext_info>
+        <flags/>
+    </release>
+    <omdb>
+        <title>American Sniper</title>
+        <year>2014</year>
+        <rated>R</rated>
+        <released>16 Jan 2015</released>
+        <runtime>132 min</runtime>
+        <genres>
+            <genre>Action</genre>
+            <genre>Biography</genre>
+            <genre>Thriller</genre>
+        </genres>
+        <directors>
+            <director>Clint Eastwood</director>
+        </directors>
+        <writers>
+            <writer>Jason Hall</writer>
+            <writer>Chris Kyle (book)</writer>
+            <writer>Scott McEwen (book)</writer>
+            <writer>Jim DeFelice (book)</writer>
+        </writers>
+        <actors>
+            <actor>Bradley Cooper</actor>
+            <actor>Kyle Gallner</actor>
+            <actor>Cole Konis</actor>
+            <actor>Ben Reed</actor>
+        </actors>
+        <plot>Navy SEAL sniper Chris Kyle's pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home to his wife and kids after four tours of duty, however, Chris finds that it is the war he can't leave behind.</plot>
+        <language>English</language>
+        <country>USA</country>
+        <poster>http://ia.media-imdb.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_SX300.jpg</poster>
+        <metascore>72</metascore>
+        <imdbRating>7.4</imdbRating>
+        <imdbVotes>220,224</imdbVotes>
+        <imdbID>tt2179136</imdbID>
+        <type>movie</type>
+    </omdb>
+</releaser>

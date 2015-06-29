@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<releaser>
+    <release>
+        <id>e74f2882ea55a</id>
+        <dirname>Seventh.Son.German.BDRiP.x264-EXQUiSiTE</dirname>
+        <link_href>http://www.xrel.to/movie-nfo/959834/Seventh-Son-German-BDRiP-x264-EXQUiSiTE.html</link_href>
+        <time>1429650537</time>
+        <group_name>EXQUiSiTE</group_name>
+        <nuke_reason></nuke_reason>
+        <size>
+            <number>1030</number>
+            <unit>MB</unit>
+        </size>
+        <video_type>Blu-ray</video_type>
+        <audio_type>AC3</audio_type>
+        <num_ratings>3.0</num_ratings>
+        <video_rating>9.3333</video_rating>
+        <audio_rating>9.3333</audio_rating>
+        <ext_info>
+            <type>movie</type>
+            <id>8087200d13973</id>
+            <title>Seventh Son</title>
+            <link_href>http://www.xrel.to/movie/80243/Seventh-Son.html</link_href>
+            <rating>5.9787</rating>
+            <num_ratings>47</num_ratings>
+            <uris>
+                <uri>imdb:tt1121096</uri>
+            </uris>
+        </ext_info>
+        <flags/>
+    </release>
+    <omdb>
+        <title>Seventh Son</title>
+        <year>2014</year>
+        <rated>PG-13</rated>
+        <released>06 Feb 2015</released>
+        <runtime>102 min</runtime>
+        <genres>
+            <genre>Action</genre>
+            <genre>Adventure</genre>
+            <genre>Fantasy</genre>
+        </genres>
+        <directors>
+            <director>Sergey Bodrov</director>
+        </directors>
+        <writers>
+            <writer>Charles Leavitt (screenplay)</writer>
+            <writer>Steven Knight (screenplay)</writer>
+            <writer>Matt Greenberg (screen story)</writer>
+            <writer>Joseph Delaney (novel)</writer>
+        </writers>
+        <actors>
+            <actor>Jeff Bridges</actor>
+            <actor>Ben Barnes</actor>
+            <actor>Julianne Moore</actor>
+            <actor>Alicia Vikander</actor>
+        </actors>
+        <plot>When Mother Malkin, the queen of evil witches, escapes the pit she was imprisoned in by professional monster hunter Spook decades ago and kills his apprentice, he recruits young Tom, the seventh son of the seventh son, to help him.</plot>
+        <language>English</language>
+        <country>USA, UK, Canada, China</country>
+        <poster>http://ia.media-imdb.com/images/M/MV5BMjAxNTg2MDkyN15BMl5BanBnXkFtZTgwNzA3NzY1MjE@._V1_SX300.jpg</poster>
+        <metascore>30</metascore>
+        <imdbRating>5.5</imdbRating>
+        <imdbVotes>35,021</imdbVotes>
+        <imdbID>tt1121096</imdbID>
+        <type>movie</type>
+    </omdb>
+</releaser>
